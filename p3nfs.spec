@@ -13,7 +13,6 @@ Group:		Networking/Other
 URL:		http://www.koeniglich.de/p3nfs.html
 Source0:	%{name}-%{version}.tar.bz2
 Patch0:		p3nfs_no_client.patch.bz2
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 p3nfs is a Symbian (Psion/Nokia/Sony-Ericsson/etc) to UNIX/Linux 
