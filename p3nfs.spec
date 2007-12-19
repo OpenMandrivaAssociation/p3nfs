@@ -38,6 +38,7 @@ supported mobile devices can be found in %{_docdir}/%{name}-%{version}.
 rm -rf $RPM_BUILD_ROOT
 
 %makeinstall DESTDIR=${RPM_BUILD_ROOT}
+mv $RPM_BUILD_ROOT%{_docdir}/%{name}{-%{version},}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
