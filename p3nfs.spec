@@ -1,6 +1,6 @@
 %define name    p3nfs
 %define version 5.19
-%define release %mkrel 3
+%define release %mkrel 4
 
 %define summary Utility to access Symbian based (Psion/Nokia/Sony-Ericsson/etc) mobile devices
 
