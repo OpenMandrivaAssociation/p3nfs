@@ -1,6 +1,6 @@
 %define name    p3nfs
 %define version 5.19
-%define release %mkrel 5
+%define release %mkrel 4
 
 %define summary Utility to access Symbian based (Psion/Nokia/Sony-Ericsson/etc) mobile devices
 
@@ -51,3 +51,26 @@ rm -rf $RPM_BUILD_ROOT
 %{_bindir}/*
 %{_mandir}/*/*
 
+
+
+%changelog
+* Fri Sep 04 2009 Thierry Vignaud <tvignaud@mandriva.com> 5.19-4mdv2010.0
++ Revision: 430227
+- rebuild
+
+* Wed Jul 30 2008 Thierry Vignaud <tvignaud@mandriva.com> 5.19-3mdv2009.0
++ Revision: 254947
+- rebuild
+
+  + Olivier Blin <oblin@mandriva.com>
+    - restore BuildRoot
+
+* Wed Dec 19 2007 Thierry Vignaud <tvignaud@mandriva.com> 5.19-1mdv2008.1
++ Revision: 134699
+- fix build
+- kill re-definition of %%buildroot on Pixel's request
+- import p3nfs
+
+
+* Sat Dec 18 2005 Udo Rader <udo.rader@bestsolution.at> 5.19-1mdk
+- initial release on Mandriva
