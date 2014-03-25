@@ -1,0 +1,25 @@
+--- Makefile.in.old	2005-12-18 00:51:09.000000000 +0100
++++ Makefile.in	2005-12-18 01:41:20.000000000 +0100
+@@ -7,14 +7,13 @@
+ SHELL		= /bin/sh
+ TARDIR		= p3nfs-$(VERSION)
+ TARFILE		= p3nfs-$(VERSION).tar.gz
+-PREFIX		= $(DESTDIR)/@prefix@
++PREFIX		= $(DESTDIR)@prefix@
+ BINDIR		= $(PREFIX)/bin
+ DOCDIR		= $(PREFIX)/share/doc/p3nfs-$(VERSION)
+ MANDIR		= $(PREFIX)/share/man/man1
+ 
+ all clean distclean::
+ 	cd server; $(MAKE) $@
+-	cd client/epoc32/nfsapp; $(MAKE) $@
+ 
+ install::
+ 	mkdir -p $(BINDIR)
+@@ -42,6 +41,5 @@
+ distclean::
+ 	rm -f p3nfs-$(VERSION).tar.gz
+ 	rm -f Makefile server/Makefile utils/Makefile
+-	rm -f client/epoc32/nfsapp/Makefile
+ 	rm -f config.cache config.status config.log *.orig
+ 	rm -f utils/p3nfs.spec doc/p3nfsd.1

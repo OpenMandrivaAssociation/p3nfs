@@ -6,7 +6,9 @@ License:	GPLv2+
 Group:		Networking/Other
 Url:		http://www.koeniglich.de/p3nfs.html
 Source0:	%{name}-%{version}.tar.bz2
-Patch0:		p3nfs_no_client.patch.bz2
+Patch0:		p3nfs_no_client.patch
+# Hardcode tty because build system doesn't have it
+Patch1:		p3nfs-5.19-tty.patch
 
 %description
 p3nfs is a Symbian (Psion/Nokia/Sony-Ericsson/etc) to UNIX/Linux
@@ -29,7 +31,8 @@ on the mobile device.
 
 %prep
 %setup -q
-%patch0
+%patch0 -p0
+%patch1 -p1
 
 %build
 %configure2_5x

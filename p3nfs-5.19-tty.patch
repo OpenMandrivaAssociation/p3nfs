@@ -1,0 +1,46 @@
+diff -urN p3nfs-5.19/configure p3nfs-5.19-patched/configure
+--- p3nfs-5.19/configure	2005-11-25 03:24:42.000000000 +1000
++++ p3nfs-5.19-patched/configure	2014-03-25 18:26:14.565405676 +1100
+@@ -3366,20 +3366,7 @@
+ 
+ 
+ 
+-echo "$as_me:$LINENO: checking for default serial line" >&5
+-echo $ECHO_N "checking for default serial line... $ECHO_C" >&6
+-for i in /dev/tty0p0 /dev/tty00 /dev/ttyS0 /dev/ttys0 /dev/term/a /dev/ttyfa /dev/ttya /dev/tty0 /dev/ttyf1 /dev/cuaa1 ; do
+-  if test -c $i ; then
+-    DDEV=$i
+-    echo "$as_me:$LINENO: result: $i" >&5
+-echo "${ECHO_T}$i" >&6
+-    break
+-  fi
+-done
+-test -z "$DDEV" && { { echo "$as_me:$LINENO: error: serial device not found... Try harder." >&5
+-echo "$as_me: error: serial device not found... Try harder." >&2;}
+-   { (exit 1); exit 1; }; }
+-
++DDEV=/dev/ttyS0
+ 
+ 
+ echo "$as_me:$LINENO: checking EPOCR5 SDK" >&5
+diff -urN p3nfs-5.19/configure.in p3nfs-5.19-patched/configure.in
+--- p3nfs-5.19/configure.in	2005-11-25 03:14:46.000000000 +1000
++++ p3nfs-5.19-patched/configure.in	2014-03-25 18:25:12.301406863 +1100
+@@ -72,16 +72,7 @@
+ test -z "$MTAB" && { echo "mtab not found... " 1>&2; CFLAGS="${CFLAGS} -DDONT_UPDATE_MTAB";}
+ AC_SUBST(MTAB)
+ 
+-
+-AC_MSG_CHECKING(for default serial line)
+-for i in /dev/tty0p0 /dev/tty00 /dev/ttyS0 /dev/ttys0 /dev/term/a /dev/ttyfa /dev/ttya /dev/tty0 /dev/ttyf1 /dev/cuaa1 ; do
+-  if test -c $i ; then
+-    DDEV=$i
+-    AC_MSG_RESULT($i)
+-    break
+-  fi
+-done
+-test -z "$DDEV" && AC_MSG_ERROR(serial device not found... Try harder.)
++DDEV=/dev/ttyS0
+ AC_SUBST(DDEV)
+ 
+ dnl Looking for Symbian SDKs:
