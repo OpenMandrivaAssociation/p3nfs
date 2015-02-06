@@ -1,7 +1,7 @@
 Summary:	Utility to access Symbian based (Psion/Nokia/Sony-Ericsson/etc) mobile devices
 Name:		p3nfs
 Version:	5.19
-Release:	5
+Release:	6
 License:	GPLv2+
 Group:		Networking/Other
 Url:		http://www.koeniglich.de/p3nfs.html
