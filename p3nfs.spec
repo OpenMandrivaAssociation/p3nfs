@@ -4,7 +4,7 @@ Version:	5.19
 Release:	6
 License:	GPLv2+
 Group:		Networking/Other
-Url:		http://www.koeniglich.de/p3nfs.html
+Url:		https://www.koeniglich.de/p3nfs.html
 Source0:	%{name}-%{version}.tar.bz2
 Patch0:		p3nfs_no_client.patch
 # Hardcode tty because build system doesn't have it
